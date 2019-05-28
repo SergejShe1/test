@@ -1,0 +1,15 @@
+{
+    "name": "she1/test",
+    "authors": [
+        {
+            "name": "Sergey Shevshuk",
+            "email": "sdfsdf@sss.ss"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "": "src/"
+        }
+    },
+    "require": {}
+}
