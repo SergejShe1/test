@@ -5,5 +5,5 @@ interface ShapeInterface
 {
     public function getSquare(): float;
     public function getPerimeter(): float;
-    public function getName(): string ;
+    public function getName(): string;
 }
