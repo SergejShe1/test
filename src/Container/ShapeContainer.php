@@ -9,13 +9,13 @@ use Shape\ShapeInterface;
 class ShapeContainer implements ShapeInterface
 {
 
-    /** @var Shapes[] */
-    protected $shapes;
+    /** @var ShapeInterface */
+    private $shape;
 
-    public function addStudent(Student $shapes){
-        $this->shapes[] = $shapes;
+
+    public function addShape(ShapeInterface $shape){
+        $this->shape[] = $shape;
 
         return $this;
     }
-
 }

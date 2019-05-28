@@ -2,6 +2,7 @@
 
 use Container\Room;
 use Container\RoomComposition;
+use Container\ShapeContainer;
 use Container\Student;
 use Container\Sddf;
 use Shape\Circle;
@@ -22,6 +23,40 @@ echo '<br>';
 $triangle = new Triangle(5, 4, 3);
 echo $triangle->getName();
 echo $triangle->getSquare();
+
+echo '<br>';
+
+$shape = new ShapeContainer(Triangle::class);
+echo $shape->addShape();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+echo '<br>';
+
+
+
+
+
+
+
 
 
 
