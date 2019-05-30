@@ -75,13 +75,3 @@ echo '<br>';
 //echo $s->sd();
 
 
-
-$s1 = new Student();
-
-$s2 = new Student();
-
-$room1 = new Room();
-$room2 = new RoomComposition($s1, $s2);
-
-$room1->addStudent($s1)->addStudent($s2);
-
