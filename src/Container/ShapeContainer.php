@@ -8,10 +8,8 @@ use Shape\ShapeInterface;
 
 class ShapeContainer implements ShapeInterface
 {
-
     /** @var ShapeInterface */
     private $shape;
-
 
     public function addShape(ShapeInterface $shape){
         $this->shape[] = $shape;
@@ -19,6 +17,3 @@ class ShapeContainer implements ShapeInterface
         return $this;
     }
 }
-
-
-
