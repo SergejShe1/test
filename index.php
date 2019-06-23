@@ -1,10 +1,7 @@
 <?php
 
-use Container\Room;
-use Container\RoomComposition;
+
 use Container\ShapeContainer;
-use Container\Student;
-use Container\Sddf;
 use Shape\Circle;
 use Shape\Square;
 use Shape\Triangle;
@@ -26,10 +23,34 @@ echo $triangle->getSquare();
 
 echo '<br>';
 
-$shape = new ShapeContainer(Triangle::class);
+//////////////////////////////////////////////////////
+
+$shape = new Triangle(3,4,5);
+$shape2 = new Square(5);
+
+$container = new ShapeContainer($shape);
+
+echo $container->addShape($shape);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+$shape = new ShapeContainer(Triangle::class); //что эоо аа дичь????
 echo $shape->addShape();
-
-
+*/
 
 
 

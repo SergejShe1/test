@@ -9,9 +9,9 @@ class Square implements ShapeInterface
     private $name;
     private $x;
 
-    public function __construct(float $x, $name)
+    public function __construct(float $x)
     {
-        $this->name = $name;
+        //$this->name = $name;
         $this->x = $x;
     }
 
