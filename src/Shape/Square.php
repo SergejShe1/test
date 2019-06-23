@@ -6,7 +6,7 @@ namespace Shape;
 
 class Square implements ShapeInterface
 {
-    private $name;
+    //private $name;
     private $x;
 
     public function __construct(float $x)
@@ -22,7 +22,7 @@ class Square implements ShapeInterface
 
     public function getPerimeter(): float
     {
-        return $this->x + $this->x;
+        return ($this->x + $this->x) * 2;
     }
 
     public function getName(): string

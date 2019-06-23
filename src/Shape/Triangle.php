@@ -26,7 +26,7 @@ class Triangle implements ShapeInterface
     public function getSquare(): float
     {
         $p = $this->getPerimeter() / 2;
-        return sqrt(($p*($p-$this->a)*($p-$this->b)*($p-$this->c)));
+        return sqrt(($p * ($p - $this->a) * ($p - $this->b) * ($p - $this->c)));
     }
 
     public function getName(): string

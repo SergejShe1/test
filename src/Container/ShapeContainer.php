@@ -9,30 +9,38 @@ use Shape\ShapeInterface;
 class ShapeContainer implements ShapeInterface
 
 {
-    private $shape;
+    private $shapes = [];
 
 
-    public function __construct(ShapeInterface $shape)
+    public function addShape(ShapeInterface $shape)
     {
-        $this->shape = $shape;
-    }
-
-    /** @var Shape[] */
-
-    public function addShape(ShapeInterface $shape){
-        $this->shape[] = $shape;
+        $this->shapes[] = $shape;
         return $this;
     }
 
     public function getPerimeter(): float
     {
-        return $this->shape->getPerimeter() + $this->shape->getPerimeter();
+
+
+        $sum = 0;
+
+        foreach ($this->shapes as $shape) {
+
+            $sum += $shape->getPerimeter();
+        }
+        return $sum;
+
     }
 
     public function getSquare(): float
     {
-        return $this->shape->getSquare() + $this->shape->getSquare();
+        $sum = 0;
 
+        foreach ($this->shapes as $shape) {
+
+            $sum += $shape->getSquare();
+        }
+        return $sum;
     }
 
     public function getName(): string

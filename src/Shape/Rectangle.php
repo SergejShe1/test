@@ -6,15 +6,13 @@ namespace Shape;
 
 class Rectangle implements ShapeInterface
 {
-    private $name;
     private $x;
     private $y;
 
-    public function __construct(float $x, float $y, $name)
+    public function __construct(float $x, float $y)
     {
         $this->x = $x;
         $this->y = $y;
-        $this->name = $name;
     }
 
     public function getSquare(): float
@@ -24,7 +22,7 @@ class Rectangle implements ShapeInterface
 
     public function getPerimeter(): float
     {
-        return $this->x + $this->y;
+        return ($this->x + $this->y)*2;
     }
 
     public function getName(): string
