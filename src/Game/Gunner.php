@@ -4,10 +4,11 @@
 namespace Game;
 
 
-class Gunner implements Unit
+class Gunner implements UnitInterface
 {
     private $health;
     private $attack;
+
 
 
     public function getHealth(): int

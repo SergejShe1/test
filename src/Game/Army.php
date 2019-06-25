@@ -4,7 +4,7 @@
 namespace Game;
 
 
-class Army implements Unit
+class Army implements UnitInterface
 {
     private $name;
     private $units = [];
@@ -14,7 +14,7 @@ class Army implements Unit
         $this->name = $name;
     }
 
-    public function addUnit(Unit $unit)
+    public function addUnit(UnitInterface $unit)
     {
         $this->units[] = $unit;
         return $this;

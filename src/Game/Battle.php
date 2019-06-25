@@ -10,7 +10,7 @@ class Battle
     private $army2;
 
 
-    public function __construct(Unit $army1, Unit $army2)
+    public function __construct(UnitInterface $army1, UnitInterface $army2)
     {
         $this->army1 = $army1;
         $this->army2 = $army2;

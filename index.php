@@ -1,7 +1,6 @@
 <?php
 
-
-use Game\Army;
+/*
 use Game\Shooter;
 use Game\Sniper;
 use Game\Panzer;
@@ -9,13 +8,31 @@ use Game\Aircraft;
 use Game\Helicopter;
 use Game\Gunner;
 use Game\Paratrooper;
+*/
+
+
 use Game\Battle;
+use Game\Army;
+use Game\Unit;
+use Game\UnitInterface;
 
 
 require_once 'vendor/autoload.php';
 
 error_reporting(E_ALL);
 
+
+
+
+$sniper = new Unit('sniper',20,45);
+$shooter = new Unit('shooter',30,25);
+$helicopter = new Unit('helicopter',50,75);
+$paratrooper = new Unit('paratrooper',100,85);
+$panzer = new Unit('panzer',720,445);
+$aircraft = new Unit('aircraft',202,95);
+$gunner = new Unit('gunner',30,105);
+
+/*
 
 $sniper = new Sniper();
 $shooter = new Shooter();
@@ -24,7 +41,7 @@ $paratrooper = new Paratrooper();
 $panzer = new Panzer();
 $aircraft = new Aircraft();
 $gunner = new Gunner();
-
+*/
 /////////////////////////////////////////
 
 $azov = new Army('Азов');
@@ -46,6 +63,11 @@ $azov->addUnit($panzer);
 
         $vzvod1->addUnit($panzer);
         $vzvod1->addUnit($shooter);
+        $vzvod1->addUnit($panzer);
+        $vzvod1->addUnit($panzer);
+        $vzvod1->addUnit($panzer);
+        $vzvod1->addUnit($panzer);
+        $vzvod1->addUnit($panzer);
         $vzvod1->addUnit($panzer);
         $vzvod1->addUnit($panzer);
         $vzvod1->addUnit($panzer);
@@ -73,6 +95,15 @@ $br95->addUnit($shooter);
 
 $somali = new Army('Сомали');
 
+$somali->addUnit($panzer);
+$somali->addUnit($panzer);
+$somali->addUnit($panzer);
+$somali->addUnit($panzer);
+$somali->addUnit($panzer);
+$somali->addUnit($panzer);
+$somali->addUnit($panzer);
+$somali->addUnit($panzer);
+$somali->addUnit($panzer);
 $somali->addUnit($panzer);
 $somali->addUnit($panzer);
 $somali->addUnit($panzer);
