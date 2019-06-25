@@ -6,14 +6,14 @@ namespace Game;
 
 class Battle
 {
-    private $health;
-    private $attack;
+    private $army1;
+    private $army2;
 
 
-    public function __construct(int $health, int $attack)
+    public function __construct(Unit  $army1, Unit $army2)
     {
-        $this->health = $health;
-        $this->attack = $attack;
+        $this->army1 = $army1;
+        $this->army2 = $army2;
     }
 
 
