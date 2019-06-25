@@ -20,8 +20,6 @@ class ShapeContainer implements ShapeInterface
 
     public function getPerimeter(): float
     {
-
-
         $sum = 0;
 
         foreach ($this->shapes as $shape) {
@@ -29,7 +27,6 @@ class ShapeContainer implements ShapeInterface
             $sum += $shape->getPerimeter();
         }
         return $sum;
-
     }
 
     public function getSquare(): float
