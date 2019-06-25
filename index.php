@@ -9,6 +9,7 @@ use Game\Aircraft;
 use Game\Helicopter;
 use Game\Gunner;
 use Game\Paratrooper;
+use Game\Battle;
 
 
 require_once 'vendor/autoload.php';
@@ -84,14 +85,15 @@ $somali->addUnit($shooter);
 $somali->addUnit($shooter);
 
 
-echo $azov->getHealth();
+echo $somali->getHealth();
 echo '<br>';
-echo $azov->getAttack();
+echo $somali->getAttack();
 echo '<br>';
 
 
+$battle = new Battle($azov, $somali);
 
-
+echo $battle->getWinner();
 
 
 

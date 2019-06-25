@@ -44,6 +44,7 @@ class Army implements Unit
 
     public function getName(): string
     {
-
+        return $this->name;
     }
 }
+
