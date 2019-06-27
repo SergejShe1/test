@@ -3,9 +3,9 @@
 
 namespace Game;
 
-
 interface UnitInterface
 {
+
     public function getHealth(): int;
 
     public function getAttack(): int;

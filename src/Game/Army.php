@@ -3,10 +3,15 @@
 
 namespace Game;
 
-
 class Army implements UnitInterface
 {
+    /**
+     * @var string
+     */
     private $name;
+    /**
+     * @var array
+     */
     private $units = [];
 
     public function __construct(string $name)

@@ -3,12 +3,14 @@
 
 namespace Container;
 
-
 use Shape\ShapeInterface;
 
 class ShapeContainer implements ShapeInterface
 
 {
+    /**
+     * @var array
+     */
     private $shapes = [];
 
 

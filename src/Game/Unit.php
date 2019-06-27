@@ -3,15 +3,19 @@
 
 namespace Game;
 
-
 class Unit implements UnitInterface
 {
+    /**
+     * @var int
+     */
     private $health;
     private $attack;
+    /**
+     * @var string
+     */
     private $name;
 
-
-    public function __construct($name, $health, $attack)
+    public function __construct(string $name, int $health, int $attack)
     {
         $this->name = $name;
         $this->health = $health;

@@ -10,20 +10,51 @@ use Game\Gunner;
 use Game\Paratrooper;
 */
 
-
+/*
+ *
 use Game\Battle;
 use Game\Army;
 use Game\Unit;
 use Game\UnitInterface;
+*/
 
+use\Decorator\Ammunition;
+use\Decorator\AmmunitionPropertiesDecorator;
 
 require_once 'vendor/autoload.php';
 
 error_reporting(E_ALL);
 
 
+$markup = new AmmunitionPropertiesDecorator(new Ammunition);
+
+echo $markup->getName();
+echo '<br>';
+echo "Цена с наценкой: " . $markup->getPrice();
+echo '<br>';
+echo "Количество: " . $markup->getQuantity();
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 $sniper = new Unit('sniper',20,45);
 $shooter = new Unit('shooter',30,25);
 $helicopter = new Unit('helicopter',50,75);
@@ -43,7 +74,7 @@ $aircraft = new Aircraft();
 $gunner = new Gunner();
 */
 /////////////////////////////////////////
-
+/*
 $azov = new Army('Азов');
 $vzvod1 = new Army('Первый взвод');
 
@@ -126,7 +157,7 @@ $battle = new Battle($azov, $somali);
 
 echo $battle->getWinner();
 
-
+*/
 
 
 
