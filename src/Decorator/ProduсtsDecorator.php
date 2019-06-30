@@ -4,14 +4,14 @@
 namespace Decorator;
 
 
-abstract class ProduktsDecorator implements Produkts
+abstract class ProduсtsDecorator implements Produсts
 {
     /**
-     * @var Produkts
+     * @var Produсts
      */
     protected $decoratedProducts;
 
-    public function __construct(Produkts $decoratedProducts)
+    public function __construct(Produсts $decoratedProducts)
     {
         $this->decoratedProducts = $decoratedProducts;
     }

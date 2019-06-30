@@ -4,7 +4,7 @@
 namespace Decorator;
 
 
-class Ammunition implements Produkts
+class Ammunition implements Produсts
 {
     public function getName(): string
     {

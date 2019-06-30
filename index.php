@@ -1,5 +1,9 @@
 <?php
-
+/*
+function __autoload($class_name){
+    require_once $class_name . '.php';
+}
+*/
 /*
 use Game\Shooter;
 use Game\Sniper;
@@ -9,7 +13,6 @@ use Game\Helicopter;
 use Game\Gunner;
 use Game\Paratrooper;
 */
-
 /*
  *
 use Game\Battle;
@@ -17,15 +20,41 @@ use Game\Army;
 use Game\Unit;
 use Game\UnitInterface;
 */
-
+/*
 use\Decorator\Ammunition;
 use\Decorator\AmmunitionPropertiesDecorator;
+*/
+use\Singleton\Products;
+use\Singleton\DbSingleton;
+use\Singleton\SingletonExample;
+
 
 require_once 'vendor/autoload.php';
 
 error_reporting(E_ALL);
 
 
+
+
+$products = new Products();
+
+
+echo '<pre>';
+echo ($products->getAllProducts());
+echo '</pre>';
+
+
+Products::getInstance();
+
+
+
+
+
+
+
+
+
+/*
 $markup = new AmmunitionPropertiesDecorator(new Ammunition);
 
 echo $markup->getName();
@@ -35,25 +64,10 @@ echo '<br>';
 echo "Количество: " . $markup->getQuantity();
 
 
+//////////////////////////////////////////////////////////
+*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+////////////////////////////////////////////////////////////
 /*
 $sniper = new Unit('sniper',20,45);
 $shooter = new Unit('shooter',30,25);
@@ -157,14 +171,13 @@ $battle = new Battle($azov, $somali);
 
 echo $battle->getWinner();
 
+
+////////////////////////////////////////////
 */
 
 
-
-
-
-
-
+///////////////////////////////////////////////
+///////////////////////////////////////////////
 /*
 $circle = new Circle(5);
 echo $circle->getName();
@@ -178,6 +191,8 @@ echo $triangle->getName();
 echo $triangle->getSquare();
 
 echo '<br>';
+
+
 
 ////////////////////////////////////////////////////////////////
 

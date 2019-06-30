@@ -4,7 +4,7 @@
 namespace Decorator;
 
 
-interface Produkts
+interface Produсts
 {
 
     public function getPrice(): float;

@@ -4,16 +4,16 @@
 namespace Decorator;
 
 
-class AmmunitionPropertiesDecorator extends ProduktsDecorator
+class AmmunitionPropertiesDecorator extends ProduсtsDecorator
 {
-    public function __construct(Produkts $decoratedProdukts)
+    public function __construct(Produсts $decoratedProdukts)
     {
         parent::__construct($decoratedProdukts);
     }
 
     private function getMarkup()
     {
-        return  0.2;
+        return 0.2;
     }
 
     public function getName(): string
@@ -31,7 +31,7 @@ class AmmunitionPropertiesDecorator extends ProduktsDecorator
     public function getQuantity(): int
     {
 
-        return $this->decoratedProducts->getQuantity() ;
+        return $this->decoratedProducts->getQuantity();
     }
 
 }
