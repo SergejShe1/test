@@ -3,7 +3,7 @@
 
 namespace Singleton;
 
-
+use PDO;
 abstract class DbSingleton implements SingletonInterface
 {
     /**
@@ -14,7 +14,7 @@ abstract class DbSingleton implements SingletonInterface
     public static function getInstance()
     {
         if (self::$_db === null) {
-            self::$_db = new \PDO('mysql:host=localhost; dbname=DataB', 'root', 'root');
+            self::$_db = new PDO('mysql:host=localhost; dbname=DataB', 'root', 'root');
         }
         return self::$_db;
     }

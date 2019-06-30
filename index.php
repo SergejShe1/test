@@ -40,11 +40,11 @@ $products = new Products();
 
 
 echo '<pre>';
-echo ($products->getAllProducts());
+echo ($products->getAllProducts(Products::getInstance()
+));
 echo '</pre>';
 
 
-Products::getInstance();
 
 
 

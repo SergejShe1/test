@@ -3,10 +3,10 @@
 
 namespace Singleton;
 
+use PDO;
 
 
-
-class Products extends DbSingleton
+class Products
 {
 
     /**
@@ -23,6 +23,6 @@ class Products extends DbSingleton
     {
         $result = $this->_db->query("SELECT * FROM `products`");
 
-        return $result->fetchAll(\PDO::FETCH_ASSOC);
+        return $result->fetchAll(PDO::FETCH_ASSOC);
     }
 }
